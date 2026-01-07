@@ -1,1 +1,208 @@
+# Week 1: Machine Learning Fundamentals
+
+This folder contains two foundational machine learning assignments focusing on basic algorithms and optimization techniques.
+
+---
+
+## 📁 Contents
+
+### 1. Perceptron Algorithm (`perceptron.ipynb`)
+Implementation of the perceptron learning algorithm with visualization of decision boundaries.
+
+**Key Features:**
+- Binary classification on 2D data
+- Visual decision boundary evolution
+- Convergence analysis
+- Linearly separable and non-separable data experiments
+
+**Topics Covered:**
+- Perceptron weight update rule: `w = w + η * y * x`
+- Linear separability
+- Decision boundaries
+- Convergence behavior
+
+---
+
+### 2. Linear Regression (`Week1_assignment2.ipynb`)
+Implementation of linear regression using both closed-form solution and gradient descent optimization.
+
+**Key Components:**
+
+#### Task 1: Closed-Form Solution
+- Direct matrix computation: `w* = (X^T X)^(-1) X^T y`
+
+#### Task 2: L2 Loss Function
+- Mean squared error: `L(w) = (1/n) Σ(y - w^T x)^2`
+
+#### Task 3: Loss Derivative
+- Gradient computation: `∇L = (-2/n) X^T (Y - Xw)`
+
+#### Task 4: Gradient Descent
+- Iterative optimization with convergence checking
+- Learning rate: η = 0.001
+- Max iterations: 10,000
+- Convergence threshold: ε = 1e-15
+
+**Outputs:**
+- Trained weight vector
+- Test error vs iterations plot
+- Convergence statistics
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+```bash
+pip install numpy torch pandas matplotlib jupyter
+```
+
+### Dataset
+- `dataset01.csv` - Training and test data for linear regression
+- Generated data for perceptron experiments
+
+### Running the Notebooks
+
+**Option 1: Local Jupyter**
+```bash
+jupyter notebook
+# Open the .ipynb file
+# Run all cells
+```
+
+**Option 2: Google Colab**
+1. Upload notebook to https://colab.research.google.com/
+2. Upload required dataset (dataset01.csv)
+3. Runtime → Run all
+
+**Option 3: VS Code**
+1. Install Jupyter extension
+2. Open .ipynb file
+3. Click "Run All"
+
+---
+
+## 📊 Expected Results
+
+### Perceptron
+- **Linearly Separable Data:** Converges quickly (< 100 iterations)
+- **Non-Separable Data:** May not converge within max iterations
+- **Visualization:** Decision boundary evolution over training
+
+### Linear Regression
+- **Convergence:** Typically within 200-500 iterations
+- **Test Loss:** Decreases exponentially
+- **Final Loss:** ~0.01-0.05 (depends on dataset)
+
+---
+
+## 🧪 Experiments
+
+### Perceptron Experiments
+1. Different feature combinations
+2. Varying noise ratios (0.1, 0.2, 0.3)
+3. Different sample sizes (100, 500, 1000)
+4. Learning rate variations
+
+### Linear Regression Experiments
+1. Different learning rates (1e-2, 1e-3, 1e-4)
+2. Various initialization strategies
+3. Different train/test splits
+4. Comparison with closed-form solution
+
+---
+
+## 📈 Learning Objectives
+
+**By completing these assignments, you will understand:**
+- How gradient descent optimizes model parameters
+- The difference between closed-form and iterative solutions
+- Decision boundary concepts in classification
+- Convergence behavior and stopping criteria
+- The importance of learning rate selection
+- Linear vs non-linear separability
+
+---
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+**Issue:** `dataset01.csv not found`
+- **Solution:** Ensure dataset is in the same folder as notebook
+
+**Issue:** PyTorch not installed
+- **Solution:** `pip install torch` or use `py -m pip install torch`
+
+**Issue:** Perceptron doesn't converge
+- **Solution:** This is expected for non-separable data. Try linearly separable data first.
+
+**Issue:** JSON parsing error in Colab
+- **Solution:** Download as "Raw" file from GitHub, not rendered version
+
+---
+
+## 📚 Key Concepts
+
+### Perceptron
+- **Update Rule:** Only updates on misclassified points
+- **Convergence:** Guaranteed only for linearly separable data
+- **Limitation:** Cannot solve XOR problem
+
+### Linear Regression
+- **Closed Form:** Fast but requires matrix inversion (O(d³))
+- **Gradient Descent:** Scalable to large datasets
+- **Learning Rate:** Too high → divergence, too low → slow convergence
+
+---
+
+## ✅ Completion Checklist
+
+### Perceptron
+- [ ] All helper functions working
+- [ ] `perceptron_train()` implemented
+- [ ] Notebook runs without errors
+- [ ] Decision boundaries visualized
+- [ ] Experiments completed (3+ variations)
+- [ ] Observations documented
+
+### Linear Regression
+- [ ] Task 1: Closed-form solution ✓
+- [ ] Task 2: L2 loss function ✓
+- [ ] Task 3: Loss derivative ✓
+- [ ] Task 4: Gradient descent ✓
+- [ ] Test error plot generated
+- [ ] Convergence message displayed
+
+---
+
+## 📝 Notes
+
+- Always check convergence before assuming failure
+- Compare gradient descent results with closed-form solution
+- Visualizations help build intuition
+- Experiment with hyperparameters to understand their impact
+
+---
+
+## 🎯 Next Steps
+
+After completing Week 1:
+1. Move to Week 2: Feature Engineering
+2. Explore Week 3: Logistic Regression
+3. Week 4: Neural Networks
+
+---
+
+## 📧 Questions?
+
+If you encounter issues:
+1. Check the troubleshooting section
+2. Verify all dependencies are installed
+3. Ensure dataset paths are correct
+4. Review error messages carefully
+
+---
+
+**Good luck with your machine learning journey! 🚀**
 
